@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Demande de duplicata&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Demande de duplicata</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre e-mail concernant votre demande de duplicatas.
+
+Je vous prie de trouver en annexe les duplicatas des factures d’acompte des mois  XXX.
+
+Enfin, je me permets de vous rappeler que vous pouvez accéder à tout moment à une copie de vos factures via votre espace client MyLampiris :  www.my.lampiris.be . Si vous le souhaitez, vous pouvez consulter notre vidéo explicative en ligne  ICI.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

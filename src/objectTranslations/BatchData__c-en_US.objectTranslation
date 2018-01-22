@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Batch Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Batch Datas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Reference --></label>
+        <name>DEL_Account_Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>ObjectName__c</name>
+        <picklistValues>
+            <masterLabel>Account</masterLabel>
+            <translation><!-- Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attachment</masterLabel>
+            <translation><!-- Attachment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EmailMessage</masterLabel>
+            <translation><!-- EmailMessage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Object Status --></label>
+        <name>ObjectStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Id --></label>
+        <name>Object_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Id --></label>
+        <name>Parent_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process Order --></label>
+        <name>ProcessOrder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process --></label>
+        <name>Process__c</name>
+        <picklistValues>
+            <masterLabel>CRM2 Emal Integration</masterLabel>
+            <translation><!-- CRM2 Emal Integration --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>T_CaseId__c</name>
+        <relationshipLabel><!-- Batch Datas --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description History --></label>
+        <name>T_DescriptionHistory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Executing Time --></label>
+        <name>T_ExecutingTime__c</name>
+    </fields>
+    <layouts>
+        <layout>Batch Data Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

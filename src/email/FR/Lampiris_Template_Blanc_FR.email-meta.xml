@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is a blank template that can be used for any interaction with the customer.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Template Blanc</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

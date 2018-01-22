@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;confirmation frais&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Confirmation frais</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.Salutation} {!Account.LastName},
+
+Nous vous remercions pour votre e-mail concernant votre demande d’annulation de frais de rappel.
+
+Après analyse de votre dossier, je constate que vous présentez toujours un solde échu d’un montant de  XXX  euros. Pour plus de clarté, je vous ai annexé à ce mail le détail de vos factures échues.
+
+Les frais de rappels sont donc justifiés. Par conséquent, je vous demande de bien vouloir régulariser votre dossier dans les plus brefs délais.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

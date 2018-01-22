@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used as for concernn &quot;Initiale B - ELEC - Verhoging voorschot&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Initiale B - ELEC - Verhoging voorschot</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Uw klantreferentie: {!Case.C_Account_Reference__c}
+
+
+Beste {!Account.FirstName},
+
+We hebben uw e-mail over het nieuwe bedrag van uw voorschotfacturen goed ontvangen.
+
+Naar aanleiding van uw meest recente eindafrekening hebben we het bedrag van uw tussentijdse voorschotten aangepast.
+
+Net als alle andere energieleveranciers moeten we bij het bepalen van uw voorschotbedrag immers de volgende factoren in rekening brengen:
+
+de verhoging van de transport- en distributiekosten voor energielevering
+de verhoging van de federale taksen
+de gegevens die we van uw distributienetbeheerder krijgen en die uw verbruiksprofiel bepalen
+
+Door met deze elementen rekening te houden kunnen we u steeds een duidelijke factuur garanderen, aangepast aan de geldende tarieven en afgestemd op uw verbruik. Bovendien komt u dankzij deze aanpassing bij uw volgende afrekening  niet voor onaangename verrassingen te staan.
+
+Bedankt voor uw vertrouwen,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_Dutch__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

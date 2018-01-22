@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used as for concern &quot; Naamswijziging – nieuwe brief&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Naamswijziging – nieuwe brief</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Uw klantreferentie: {!Case.C_Account_Reference__c}
+
+
+Beste {!Account.FirstName},
+
+Bedankt, we hebben uw aanvraag om de contracthouder te wijzigen goed ontvangen.
+
+Voor een correcte behandeling van deze aanvraag moeten de huidige en de nieuwe contracthouder ons een gezamenlijk ondertekende brief opsturen, met daarin de contactgegevens van de nieuwe contracthouder en een kopie van de identiteitskaart van beide partijen. Deze brief moet ook verplicht de volgende melding bevatten: ‘we wensen geen eindafrekening te ontvangen’.
+
+Houd er wel rekening mee dat, indien u voor deze optie kiest, het verbruik sinds de laatste jaarlijkse afrekening volledig ten laste valt van de nieuwe contracthouder.
+
+Wenst u toch een eindafrekening? Stuur ons dan het energieovernamedocument terug, samen met het leveringscontract, nadat u deze als volgt hebt ingevuld:
+
+Vertrekkende klant: gegevens over de contracthouder.
+Overnemer: gegevens over de persoon aan wie het contract overgedragen wordt (let op: de nieuwe bewoner zal niet noodzakelijk dezelfde voorwaarden en/of tarieven genieten).
+Meterstand: de meterstanden op de datum waarop de overnemer het contract overneemt.
+EAN-code: de code vermeld op uw Lampiris-facturen.
+
+Bedankt voor uw vertrouwen,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_Dutch__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

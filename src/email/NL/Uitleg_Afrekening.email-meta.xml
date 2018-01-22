@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used as for concernn &quot;Uitleg Afrekening&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Uitleg afrekening</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Uw klantreferentie: {!Case.C_Account_Reference__c}
+
+
+Beste {!Account.FirstName},
+
+We hebben uw e-mail in verband met uw afrekening goed ontvangen.
+
+We willen u er graag aan herinneren dat uw netbeheerder ons minstens één keer per jaar uw meterstanden doorstuurt. Om uw afrekening op te maken gaan we als volgt te werk:
+
+totaal werkelijk verbruik in euro
+- totaal al gefactureerd verbruik in euro
+= bedrag van uw afrekening
+
+Het totale werkelijke verbruik stemt overeen met uw verbruik, vermeerderd met de abonnementskosten, de kosten voor de huur van de meter, de transport- en distributiekosten en eventuele belastingen.
+
+Voor het totale al gefactureerde verbruik houden we rekening met het totaalbedrag van de voorschotfacturen die u van ons hebt ontvangen. Dit stemt echter niet altijd overeen met de totale voorschotten die u ons hebt betaald.
+
+Afhankelijk van uw specifieke situatie kan dat leiden tot een factuur of tot een creditnota. Uw afrekening biedt ons bovendien de gelegenheid om het bedrag van uw volgende voorschotten nog beter af te stemmen op uw werkelijke verbruik.
+
+Houd er rekening mee dat de bedragen op de eerste pagina van uw afrekening inclusief btw zijn. In het detail van uw eindafrekening zijn de bedragen echter exclusief btw.
+
+Afrekening XXXXXX :
+
+Totaal werkelijk verbruik: XXXXX euro exclusief btw
+Totaal al gefactureerd verbruik: XXXXX euro exclusief btw
+In de onderstaande tabel vindt u een overzicht van de facturen voor de betrokken periode.
+
+Afrekening (nummer Afrekening): periode  xx/xx/xxxx - xx/xx/xxxx
+
+Facturatieperiode Factuurnummer Factuurbedrag exclusief btw*
+Januari 201    €
+Februari 201
+Maart 201
+April 201
+Mei 201
+Juni 201
+Juli 201
+Augustus 201
+September 201
+Oktober 201
+November 201
+December 201
+Totaal al gefactureerd bedrag:  €
+
+
+*Sommige componenten van het toegepaste tarief zijn niet aan btw onderworpen (aansluitingsbijdrage in Wallonië, bijdrage beschermde klanten).
+
+Uw afrekening stemt dus overeen met een bedrag in ons/uw voordeel van XXXXX euro exclusief btw of XXX euro inclusief btw.
+
+Gelieve dit bedrag ten laatste binnen de achttien dagen na de datum van de afrekening over te schrijven op rekeningnummer 001-5094242-72. Hebt u uw factuur intussen al betaald? Dan hoeft u geen rekening te houden met dit betalingsverzoek.
+
+Dit bedrag wordt ten laatste binnen de achttien dagen na de datum van uw afrekening teruggestort op uw bankrekening. Hebt u ons uw bankrekeningnummer nog niet doorgegeven? Gelieve het ons dan zo snel mogelijk te bezorgen.
+
+Bedankt voor uw vertrouwen,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_Dutch__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Initiale B - Gaz&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Initiale B - GAZ: Augmentation montant acompte après régule</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre e-mail concernant le nouveau montant de vos factures d’acompte et nous vous en remercions.
+
+Suite à la régularisation récemment établie, nous avons dû modifier le montant de vos acomptes périodiques.
+
+En effet nous sommes tenus, comme tout autre fournisseur d’énergie, de répercuter sur le montant de vos acomptes les éléments repris ci-dessous :
+
+- l’augmentation des coûts de transport et de distribution inhérents à la fourniture d’énergie;
+- la hausse des taxes fédérales;
+- les données transmises par votre gestionnaire de réseau de distribution qui déterminent votre profil de consommation;
+- le prix du gaz.
+
+Nous tenons compte de ces différents points pour vous garantir une facturation claire, adaptée aux tarifs en vigueur et représentative de votre consommation. De plus, la mise à jour de ces différents postes de facturation permettra d’éviter toute mauvaise surprise lors de votre prochaine régularisation.
+
+Vous trouverez le détail des tarifs appliqués pour la consommation et la fourniture de gaz sur notre site internet  www.lampiris.be . Soyez attentif, le prix du gaz est indexé trimestriellement. Nous nous  efforçons de vous facturer le gaz au prix le plus bas, se rapprochant au maximum du prix du marché.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

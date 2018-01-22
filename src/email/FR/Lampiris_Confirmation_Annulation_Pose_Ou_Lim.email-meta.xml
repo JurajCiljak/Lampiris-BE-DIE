@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern&quot;Confirmation annulation pose cab ou lim&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Confirmation annulation pose cab ou lim</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Suite à la régularisation de votre dossier, je vous confirme bien avoir demandé l’annulation de la pose du compteur à budget / limiteur de puissance auprès de votre gestionnaire de réseau.
+
+Rassurez-vous : votre situation est donc bien en ordre.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

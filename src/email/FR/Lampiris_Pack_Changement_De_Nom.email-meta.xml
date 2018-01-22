@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Pack changement de nom&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Pack changement de nom</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre demande de changement de titulaire de contrat et nous vous en remercions.
+
+Afin d’enregistrer votre demande, je vous prie de bien vouloir nous faire parvenir un courrier cosigné comportant les données de contact  du nouveau titulaire du contrat ainsi qu’une copie des cartes d’identité des personnes concernées. Le courrier devra obligatoirement contenir la mention « nous ne souhaitons pas recevoir de facture de régularisation de clôture ».
+
+Toutefois, soyez conscient que si vous choisissez cette option, le nouveau titulaire prendra en charge l’entièreté de la consommation enregistrée depuis la dernière régularisation annuelle.
+
+Si vous souhaitez une facture de clôture, je vous prie de bien vouloir nous retourner le document de reprise des énergies ainsi que le contrat de fourniture après les avoir complétés comme suit :
+
+Client sortant : coordonnées de la personne titulaire du contrat.
+Repreneur  : coordonnées de la personne reprenant le contrat à son nom (nous attirons votre attention sur le fait que le nouvel habitant ne bénéficiera pas nécessairement des mêmes conditions et/ou des mêmes tarifs).
+Index  : les index relevés à la date du changement de titulaire.
+Code EAN  : Code apparaissant sur vos factures Lampiris.
+
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

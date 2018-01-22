@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Initiale A3</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Initiale B - ELEC: Augmentation montant acompte après régule</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre e-mail concernant le nouveau montant de vos factures d’acompte et nous vous en remercions.
+
+Suite à la régularisation récemment établie, nous avons dû modifier le montant de vos acomptes périodiques.
+
+En effet, nous sommes tenus, comme tout autre fournisseur d’énergie, de répercuter sur le montant de vos acomptes les points suivants :
+
+
+- l&apos;augmentation des coûts de transport et de distribution inhérents à la fourniture d&apos;énergie;
+- la hausse des taxes fédérales;
+- les données transmises par votre gestionnaire de réseau de distribution qui déterminent votre profil de consommation.
+
+
+Nous tenons compte de ces différents éléments pour vous garantir une facturation claire, adaptée aux tarifs en vigueur et représentative de votre consommation. De plus, la mise à jour de ces différents éléments permettra d’éviter toute mauvaise surprise lors de votre prochaine régularisation.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!if (ispickval (User.C_Gender__c , &quot;M&quot; ), &quot;Votre collaboratrice Lampiris&quot;, &quot;Votre collaborateur Lampiris&quot;)}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

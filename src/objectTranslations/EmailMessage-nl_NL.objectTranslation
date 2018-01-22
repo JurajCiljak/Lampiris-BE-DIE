@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Case Satus --></label>
+        <name>C_Case_Satus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nul Action --></label>
+        <name>T_Nul_Action__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage>In een Case met status “nieuw”, kan er geen e-mail verzonden worden.</errorMessage>
+        <name>T_VF_No_Outbound_Emails_If_Case_Isnew</name>
+    </validationRules>
+</CustomObjectTranslation>

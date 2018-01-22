@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://die-sso.lampiris.be/auth/realms/Internal-Users/protocol/openid-connect/auth</authorizeUrl>
+    <consumerKey>SFCM-BE</consumerKey>
+    <consumerSecret>ruPrC3rO3mVx0P7z9P+B90e3v0Ti5iFLdliJ2OOcu+ZQRJ1OL2+Kkg==</consumerSecret>
+    <friendlyName>SSO DIE</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <tokenUrl>https://die-sso.lampiris.be/auth/realms/Internal-Users/protocol/openid-connect/token</tokenUrl>
+    <userInfoUrl>https://die-sso.lampiris.be/auth/realms/Internal-Users/protocol/openid-connect/userinfo</userInfoUrl>
+</AuthProvider>

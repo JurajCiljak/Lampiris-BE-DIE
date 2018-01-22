@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Lettre de bienvenue E03 confirmation&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Lettre de bienvenue E03 Confirmation</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous vous remercions de votre e-mail concernant  votre inscription.
+
+J’ai le plaisir de vous confirmer que vous êtes bien client Lampiris. Dans les faits, vous commencerez à bénéficier de nos services à partir du date du switch .
+
+Quelques semaines avant la date effective du changement de fournisseur que vous aurez choisie, vous recevrez de votre gestionnaire de réseau un courrier dans lequel il vous demandera de lui communiquer le relevé de votre compteur. Il est important de bien communiquer ces données. En effet, c’est sur cette information que votre ancien fournisseur se basera pour établir son décompte final.
+
+Lampiris sera responsable de votre approvisionnement en énergie à partir du transfert. C’est à partir de ce moment que vous pourrez bénéficier des tarifs avantageux de Lampiris.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

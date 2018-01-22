@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Define the priority if the client sends the same email to different  recipient, for example, &quot;info@lampiris.be&quot; and &quot;move@lampiris.be&quot;, in this situation we will create a signle case into &quot;Move queue&quot;. The address &quot;info@lampiris.be&quot; will be ignored.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Email_Address__c</fullName>
+        <description>The Email address wich will be routed to the according Queue</description>
+        <externalId>false</externalId>
+        <label>Email Address</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <description>Priority of the email address used when we route the case to the appropriate queue</description>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <precision>4</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Queue Name</label>
+        <length>60</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Email Priority</label>
+    <visibility>Public</visibility>
+</CustomObject>

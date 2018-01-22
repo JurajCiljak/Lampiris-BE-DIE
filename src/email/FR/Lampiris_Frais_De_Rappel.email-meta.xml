@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Frais de rappel&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Frais de rappel</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous vous remercions pour votre e-mail concernant les frais de rappel comptabilisés d’un montant de  XXXX euros.
+
+Je vous confirme par la présente n’avoir pas reçu le paiement dont vous faites mention à ce jour.
+
+Puis-je dès lors vous demander de nous envoyer une preuve de paiement sur laquelle nous pourrons trouver les données suivantes ?
+
+Date à laquelle votre compte en banque a été débité ;
+Montant du paiement en euros ;
+Numéro de compte bancaire du bénéficiaire ;
+Communication mentionnée pour le paiement.
+
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

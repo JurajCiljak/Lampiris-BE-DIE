@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Explications renouvellement&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Explications renouvellement</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre e-mail concernant  l’augmentation/la diminution  de votre facture d’acompte et vous en remercions.
+
+Chaque année, au mois de  XXX  , a lieu la reconduction tacite de votre contrat. Le montant de votre facture d’acompte est alors adapté en fonction des nouveaux tarifs énergétiques.
+
+Votre contrat est donc prolongé pour une nouvelle période contractuelle d’un an. Pendant cette période, votre électricité vous sera facturée sur la base du tarif du mois de XXX  (60 jours avant la reconduction du contrat) soit :
+
+Heures pleines :  XXX  c€ HTVA/kWh
+Heures creuses :  XXX c€ HTVA/kWh
+
+Nous avons également adapté le tarif lié aux coûts de transport et de distribution établis par votre gestionnaire de réseau de distribution. Les montants des taxes fédérales ont également été mis à jour. La mise à jour de ces différents éléments permettra d’éviter toute mauvaise surprise lors de votre prochaine régularisation.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

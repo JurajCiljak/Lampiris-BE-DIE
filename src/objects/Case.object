@@ -1,0 +1,2545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloneAsChild</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloseCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MassClose</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Standard Support Process</fullName>
+        <description>This process is used to show the phases of the standard support Case</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Hold - Awaiting Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold - Awaiting Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-opened</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Auto_response_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to mention wether the auto-response has been sent or not when the case has been created</description>
+        <externalId>false</externalId>
+        <label>Auto-response Sent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BusinessHoursId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>C_Account_Reference__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field is used to store the Account Reference linked to a Case record.</description>
+        <externalId>false</externalId>
+        <label>Account Reference</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account_Reference__c.C_Account_Name__r.Id</field>
+                <operation>equals</operation>
+                <valueField>$Source.AccountId</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account_Reference__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>C_Concern__c</fullName>
+        <description>This field is used to capture the Concern of the case.</description>
+        <externalId>false</externalId>
+        <label>Concern</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>C_Question__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>General Inquiry</fullName>
+                    <default>false</default>
+                    <label>General Inquiry</label>
+                </value>
+                <value>
+                    <fullName>Contract</fullName>
+                    <default>false</default>
+                    <label>Contract</label>
+                </value>
+                <value>
+                    <fullName>MS In (Lampiris Stolen)</fullName>
+                    <default>false</default>
+                    <label>MS In (Lampiris Stolen)</label>
+                </value>
+                <value>
+                    <fullName>MS Out (Lampiris Stealer)</fullName>
+                    <default>false</default>
+                    <label>MS Out (Lampiris Stealer)</label>
+                </value>
+                <value>
+                    <fullName>Transfer documents received</fullName>
+                    <default>false</default>
+                    <label>Transfer documents received</label>
+                </value>
+                <value>
+                    <fullName>Explanations</fullName>
+                    <default>false</default>
+                    <label>Explanations</label>
+                </value>
+                <value>
+                    <fullName>Classic relocation</fullName>
+                    <default>false</default>
+                    <label>Classic relocation</label>
+                </value>
+                <value>
+                    <fullName>Follow-up</fullName>
+                    <default>false</default>
+                    <label>Follow-up</label>
+                </value>
+                <value>
+                    <fullName>Encryption</fullName>
+                    <default>false</default>
+                    <label>Encryption</label>
+                </value>
+                <value>
+                    <fullName>Discount application</fullName>
+                    <default>false</default>
+                    <label>Discount application</label>
+                </value>
+                <value>
+                    <fullName>Intermediary bill</fullName>
+                    <default>false</default>
+                    <label>Intermediary bill</label>
+                </value>
+                <value>
+                    <fullName>Reduced after regulation</fullName>
+                    <default>false</default>
+                    <label>Reduced after regulation</label>
+                </value>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                    <label>Increase</label>
+                </value>
+                <value>
+                    <fullName>Request for duplicate</fullName>
+                    <default>false</default>
+                    <label>Request for duplicate</label>
+                </value>
+                <value>
+                    <fullName>Details</fullName>
+                    <default>false</default>
+                    <label>Details</label>
+                </value>
+                <value>
+                    <fullName>Balanced account activation</fullName>
+                    <default>false</default>
+                    <label>Balanced account activation</label>
+                </value>
+                <value>
+                    <fullName>Deactivated after client request</fullName>
+                    <default>false</default>
+                    <label>Deactivated after client request</label>
+                </value>
+                <value>
+                    <fullName>Relocations</fullName>
+                    <default>false</default>
+                    <label>Relocations</label>
+                </value>
+                <value>
+                    <fullName>GRD index correction request</fullName>
+                    <default>false</default>
+                    <label>GRD index correction request</label>
+                </value>
+                <value>
+                    <fullName>Overall explanations</fullName>
+                    <default>false</default>
+                    <label>Overall explanations</label>
+                </value>
+                <value>
+                    <fullName>Regularization (not for relocation)</fullName>
+                    <default>false</default>
+                    <label>Regularization (not for relocation)</label>
+                </value>
+                <value>
+                    <fullName>Reimbursement explanations</fullName>
+                    <default>false</default>
+                    <label>Reimbursement explanations</label>
+                </value>
+                <value>
+                    <fullName>Connection Cuzo</fullName>
+                    <default>false</default>
+                    <label>Connection Cuzo</label>
+                </value>
+                <value>
+                    <fullName>Retention - prospected by competitor</fullName>
+                    <default>false</default>
+                    <label>Retention - prospected by competitor</label>
+                </value>
+                <value>
+                    <fullName>Retention - not prospected by competitor</fullName>
+                    <default>false</default>
+                    <label>Retention - not prospected by competitor</label>
+                </value>
+                <value>
+                    <fullName>Retention - Service</fullName>
+                    <default>false</default>
+                    <label>Retention - Service</label>
+                </value>
+                <value>
+                    <fullName>General Information</fullName>
+                    <default>false</default>
+                    <label>General Information</label>
+                </value>
+                <value>
+                    <fullName>Order</fullName>
+                    <default>false</default>
+                    <label>Order</label>
+                </value>
+                <value>
+                    <fullName>Before provision</fullName>
+                    <default>false</default>
+                    <label>Before provision</label>
+                </value>
+                <value>
+                    <fullName>Attestations</fullName>
+                    <default>false</default>
+                    <label>Attestations</label>
+                </value>
+                <value>
+                    <fullName>SPAM</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SPAM</label>
+                </value>
+                <value>
+                    <fullName>TBC</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>TBC</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Client prospected by another provider</controllingFieldValue>
+                <valueName>Retention - prospected by competitor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Client not prospected by another provider</controllingFieldValue>
+                <valueName>Retention - not prospected by competitor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Client wants to leave for service concerns</controllingFieldValue>
+                <valueName>Retention - Service</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>General information</controllingFieldValue>
+                <controllingFieldValue>Isol</controllingFieldValue>
+                <valueName>General Information</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wood</controllingFieldValue>
+                <controllingFieldValue>Pellets</controllingFieldValue>
+                <valueName>Order</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I terminate my contract</controllingFieldValue>
+                <valueName>Before provision</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Searching for information</controllingFieldValue>
+                <valueName>Classic relocation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My amendment</controllingFieldValue>
+                <valueName>Encryption</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Social Tarif</controllingFieldValue>
+                <valueName>Attestations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GEEP/GEP/Marketing actions/Partners</controllingFieldValue>
+                <valueName>Discount application</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Need explanation about my accounts</controllingFieldValue>
+                <valueName>Intermediary bill</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Modifying my consumption</controllingFieldValue>
+                <valueName>Reduced after regulation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Modifying my consumption</controllingFieldValue>
+                <valueName>Increase</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Didn&apos;t receive my bill</controllingFieldValue>
+                <valueName>Request for duplicate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Modifying my client details</controllingFieldValue>
+                <valueName>Details</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Domiciliation</controllingFieldValue>
+                <valueName>Balanced account activation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Domiciliation</controllingFieldValue>
+                <valueName>Deactivated after client request</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Explanations</controllingFieldValue>
+                <valueName>Relocations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Explanations</controllingFieldValue>
+                <valueName>Reimbursement explanations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Index</controllingFieldValue>
+                <valueName>GRD index correction request</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Need explanations/Contest my regularization (not for relocation)</controllingFieldValue>
+                <valueName>Overall explanations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Clients</controllingFieldValue>
+                <valueName>General Inquiry</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Looking for information</controllingFieldValue>
+                <valueName>Contract</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mystery Switch</controllingFieldValue>
+                <valueName>MS In (Lampiris Stolen)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mystery Switch</controllingFieldValue>
+                <valueName>MS Out (Lampiris Stealer)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Screening B2C</controllingFieldValue>
+                <valueName>Transfer documents received</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CàB (Wallonie)</controllingFieldValue>
+                <controllingFieldValue>Payment Plan/ Clearance Plan</controllingFieldValue>
+                <controllingFieldValue>Reminder</controllingFieldValue>
+                <valueName>Explanations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I&apos;m the buyer</controllingFieldValue>
+                <valueName>Follow-up</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Want a regularization</controllingFieldValue>
+                <valueName>Regularization (not for relocation)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Connection issue</controllingFieldValue>
+                <valueName>Connection Cuzo</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C_Date_Time_Escalated_Closed__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( T_Status_Changed_To_Escalated__c )),  T_Status_Changed_To_Escalated__c ,  ClosedDate )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date/Time Escalated/Closed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>C_Detected_Language__c</fullName>
+        <description>This field is used to Detect the Language of a Case record.</description>
+        <externalId>false</externalId>
+        <label>Detected Language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FR</fullName>
+                    <default>false</default>
+                    <label>FR</label>
+                </value>
+                <value>
+                    <fullName>NL</fullName>
+                    <default>false</default>
+                    <label>NL</label>
+                </value>
+                <value>
+                    <fullName>DE</fullName>
+                    <default>false</default>
+                    <label>DE</label>
+                </value>
+                <value>
+                    <fullName>EN</fullName>
+                    <default>false</default>
+                    <label>EN</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C_Irrelevant_Reopen__c</fullName>
+        <description>This field is used to track if the case was reopened for a wrong reason.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Status,&quot;Closed&quot;) &amp;&amp; (T_Date_Last_Outgoing_Email__c &lt;  T_Status_Changed_To_Re_opened__c), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Irrelevant Reopen</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C_Question__c</fullName>
+        <description>This field is used to capture the Question linked to a Case record.</description>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>C_Service__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Corporate Clients</fullName>
+                    <default>false</default>
+                    <label>Corporate Clients</label>
+                </value>
+                <value>
+                    <fullName>Isol</fullName>
+                    <default>false</default>
+                    <label>Isol</label>
+                </value>
+                <value>
+                    <fullName>Looking for information</fullName>
+                    <default>false</default>
+                    <label>Looking for information</label>
+                </value>
+                <value>
+                    <fullName>Mystery Switch</fullName>
+                    <default>false</default>
+                    <label>Mystery Switch</label>
+                </value>
+                <value>
+                    <fullName>Screening B2C</fullName>
+                    <default>false</default>
+                    <label>Screening B2C</label>
+                </value>
+                <value>
+                    <fullName>CàB (Wallonie)</fullName>
+                    <default>false</default>
+                    <label>CàB (Wallonie)</label>
+                </value>
+                <value>
+                    <fullName>Payment Plan/ Clearance Plan</fullName>
+                    <default>false</default>
+                    <label>Payment Plan/ Clearance Plan</label>
+                </value>
+                <value>
+                    <fullName>Reminder</fullName>
+                    <default>false</default>
+                    <label>Reminder</label>
+                </value>
+                <value>
+                    <fullName>I&apos;m the buyer</fullName>
+                    <default>false</default>
+                    <label>I&apos;m the buyer</label>
+                </value>
+                <value>
+                    <fullName>My amendment</fullName>
+                    <default>false</default>
+                    <label>My amendment</label>
+                </value>
+                <value>
+                    <fullName>GEEP/GEP/Marketing actions/Partners</fullName>
+                    <default>false</default>
+                    <label>GEEP/GEP/Marketing actions/Partners</label>
+                </value>
+                <value>
+                    <fullName>Need explanation about my accounts</fullName>
+                    <default>false</default>
+                    <label>Need explanation about my accounts</label>
+                </value>
+                <value>
+                    <fullName>Modifying my consumption</fullName>
+                    <default>false</default>
+                    <label>Modifying my consumption</label>
+                </value>
+                <value>
+                    <fullName>Didn&apos;t receive my bill</fullName>
+                    <default>false</default>
+                    <label>Didn&apos;t receive my bill</label>
+                </value>
+                <value>
+                    <fullName>Modifying my client details</fullName>
+                    <default>false</default>
+                    <label>Modifying my client details</label>
+                </value>
+                <value>
+                    <fullName>Domiciliation</fullName>
+                    <default>false</default>
+                    <label>Domiciliation</label>
+                </value>
+                <value>
+                    <fullName>Explanations</fullName>
+                    <default>false</default>
+                    <label>Explanations</label>
+                </value>
+                <value>
+                    <fullName>Index</fullName>
+                    <default>false</default>
+                    <label>Index</label>
+                </value>
+                <value>
+                    <fullName>Need explanations/Contest my regularization (not for relocation)</fullName>
+                    <default>false</default>
+                    <label>Need explanations/Contest my regularization (not for relocation)</label>
+                </value>
+                <value>
+                    <fullName>Want a regularization</fullName>
+                    <default>false</default>
+                    <label>Want a regularization</label>
+                </value>
+                <value>
+                    <fullName>Connection issue</fullName>
+                    <default>false</default>
+                    <label>Connection issue</label>
+                </value>
+                <value>
+                    <fullName>Client prospected by another provider</fullName>
+                    <default>false</default>
+                    <label>Client prospected by another provider</label>
+                </value>
+                <value>
+                    <fullName>Client not prospected by another provider</fullName>
+                    <default>false</default>
+                    <label>Client not prospected by another provider</label>
+                </value>
+                <value>
+                    <fullName>Client wants to leave for service concerns</fullName>
+                    <default>false</default>
+                    <label>Client wants to leave for service concerns</label>
+                </value>
+                <value>
+                    <fullName>General information</fullName>
+                    <default>false</default>
+                    <label>General information</label>
+                </value>
+                <value>
+                    <fullName>Wood</fullName>
+                    <default>false</default>
+                    <label>Wood</label>
+                </value>
+                <value>
+                    <fullName>Pellets</fullName>
+                    <default>false</default>
+                    <label>Pellets</label>
+                </value>
+                <value>
+                    <fullName>I terminate my contract</fullName>
+                    <default>false</default>
+                    <label>I terminate my contract</label>
+                </value>
+                <value>
+                    <fullName>Searching for information</fullName>
+                    <default>false</default>
+                    <label>Searching for information</label>
+                </value>
+                <value>
+                    <fullName>Social Tarif</fullName>
+                    <default>false</default>
+                    <label>Social Tarif</label>
+                </value>
+                <value>
+                    <fullName>SPAM</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SPAM</label>
+                </value>
+                <value>
+                    <fullName>TBC</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>TBC</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>My reimbursements</controllingFieldValue>
+                <controllingFieldValue>My payments</controllingFieldValue>
+                <valueName>Explanations</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MyLampiris</controllingFieldValue>
+                <valueName>Connection issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retention</controllingFieldValue>
+                <valueName>Client prospected by another provider</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retention</controllingFieldValue>
+                <valueName>Client not prospected by another provider</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retention</controllingFieldValue>
+                <valueName>Client wants to leave for service concerns</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Warm</controllingFieldValue>
+                <valueName>General information</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wood</controllingFieldValue>
+                <valueName>Wood</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wood</controllingFieldValue>
+                <valueName>Pellets</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Clients</controllingFieldValue>
+                <valueName>Corporate Clients</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Isol</controllingFieldValue>
+                <valueName>Isol</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I register/terminate</controllingFieldValue>
+                <valueName>Looking for information</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I register/terminate</controllingFieldValue>
+                <valueName>Mystery Switch</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I register/terminate</controllingFieldValue>
+                <valueName>Screening B2C</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I register/terminate</controllingFieldValue>
+                <valueName>I terminate my contract</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I&apos;m defaulted</controllingFieldValue>
+                <valueName>CàB (Wallonie)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I&apos;m defaulted</controllingFieldValue>
+                <valueName>Payment Plan/ Clearance Plan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I&apos;m defaulted</controllingFieldValue>
+                <valueName>Reminder</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I&apos;m moving in / out</controllingFieldValue>
+                <valueName>I&apos;m the buyer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I&apos;m moving in / out</controllingFieldValue>
+                <valueName>My amendment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I&apos;m moving in / out</controllingFieldValue>
+                <valueName>Searching for information</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My discount/Promotion</controllingFieldValue>
+                <valueName>GEEP/GEP/Marketing actions/Partners</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My down payments</controllingFieldValue>
+                <valueName>Need explanation about my accounts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My down payments</controllingFieldValue>
+                <valueName>Modifying my consumption</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My down payments</controllingFieldValue>
+                <valueName>Didn&apos;t receive my bill</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My contractual/administrative/billing details</controllingFieldValue>
+                <valueName>Modifying my client details</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My contractual/administrative/billing details</controllingFieldValue>
+                <valueName>Social Tarif</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My payments</controllingFieldValue>
+                <valueName>Domiciliation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My regularization</controllingFieldValue>
+                <valueName>Index</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My regularization</controllingFieldValue>
+                <valueName>Need explanations/Contest my regularization (not for relocation)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>My regularization</controllingFieldValue>
+                <valueName>Want a regularization</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C_Re_Open_Date_Time__c</fullName>
+        <description>This field is used to capture the Date and Time of the opening or the re-opening of case.</description>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( T_Status_Changed_To_Re_opened__c )),  T_Status_Changed_To_Re_opened__c ,  CreatedDate )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date/Time (Re-)Opened</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>C_SPAM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to capture if a case was created from a SPAM email (campaigning, etc).
+It is necessary to flag cases which should not be taken into account in SLA calculations, among others.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Must be checked if the Case was created by a SPAM email</inlineHelpText>
+        <label>SPAM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C_Service__c</fullName>
+        <description>This field is used to capture the Service linked to a Case record.</description>
+        <externalId>false</externalId>
+        <label>Service</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Corporate Clients</fullName>
+                    <default>false</default>
+                    <label>Corporate Clients</label>
+                </value>
+                <value>
+                    <fullName>Isol</fullName>
+                    <default>false</default>
+                    <label>Isol</label>
+                </value>
+                <value>
+                    <fullName>I register/terminate</fullName>
+                    <default>false</default>
+                    <label>I register/terminate</label>
+                </value>
+                <value>
+                    <fullName>I&apos;m defaulted</fullName>
+                    <default>false</default>
+                    <label>I&apos;m defaulted</label>
+                </value>
+                <value>
+                    <fullName>I&apos;m moving in / out</fullName>
+                    <default>false</default>
+                    <label>I&apos;m moving in / out</label>
+                </value>
+                <value>
+                    <fullName>My discount/Promotion</fullName>
+                    <default>false</default>
+                    <label>My discount/Promotion</label>
+                </value>
+                <value>
+                    <fullName>My down payments</fullName>
+                    <default>false</default>
+                    <label>My down payments</label>
+                </value>
+                <value>
+                    <fullName>My contractual/administrative/billing details</fullName>
+                    <default>false</default>
+                    <label>My contractual/administrative/billing details</label>
+                </value>
+                <value>
+                    <fullName>My payments</fullName>
+                    <default>false</default>
+                    <label>My payments</label>
+                </value>
+                <value>
+                    <fullName>My regularization</fullName>
+                    <default>false</default>
+                    <label>My regularization</label>
+                </value>
+                <value>
+                    <fullName>My reimbursements</fullName>
+                    <default>false</default>
+                    <label>My reimbursements</label>
+                </value>
+                <value>
+                    <fullName>MyLampiris</fullName>
+                    <default>false</default>
+                    <label>MyLampiris</label>
+                </value>
+                <value>
+                    <fullName>Retention</fullName>
+                    <default>false</default>
+                    <label>Retention</label>
+                </value>
+                <value>
+                    <fullName>Warm</fullName>
+                    <default>false</default>
+                    <label>Warm</label>
+                </value>
+                <value>
+                    <fullName>Wood</fullName>
+                    <default>false</default>
+                    <label>Wood</label>
+                </value>
+                <value>
+                    <fullName>SPAM</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SPAM</label>
+                </value>
+                <value>
+                    <fullName>TBC</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>TBC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ClosedDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Comments</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactFax</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactMobile</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>EntitlementId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IsClosedOnCreate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsEscalated</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsStopped</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatus</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatusIcon</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Origin</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SlaExitDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SlaStartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SourceId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StopStartDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedCompany</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedName</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>T_Case_Number__c</fullName>
+        <description>This field is used to flag the Case Number as External Id.</description>
+        <externalId>true</externalId>
+        <label>Case Number (External Id)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_Close_SLA_Process__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to Close all SLA processes</description>
+        <externalId>false</externalId>
+        <label>Close SLA Process</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>T_Count_Inbound_Emails__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>This field is used to count inbound emails linked to a Case record.</description>
+        <externalId>false</externalId>
+        <label>Count Inbound Emails</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_Count_Outbound_Emails__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>This field is used to count outbound emails linked to a Case record.</description>
+        <externalId>false</externalId>
+        <label>Count Outbound Emails</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_Count_Total_Emails__c</fullName>
+        <description>This field is used to count all the emails linked to a Case record.</description>
+        <externalId>false</externalId>
+        <formula>T_Count_Inbound_Emails__c +  T_Count_Outbound_Emails__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Count Total Emails</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_Date_Last_Incoming_Email__c</fullName>
+        <description>This field is used to retrieve the Date of the Last Incoming Email on a Case record.</description>
+        <externalId>false</externalId>
+        <label>Date Last Incoming Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>T_Date_Last_Outgoing_Email__c</fullName>
+        <description>This field is used to retrieve the Date of the Last Outgoing Email on a Case record.</description>
+        <externalId>false</externalId>
+        <label>Date Last Outgoing Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>T_Last_Inbound_Email_Id__c</fullName>
+        <description>This field is used to store the Id of the last Inbound Email.</description>
+        <externalId>false</externalId>
+        <label>Last Inbound Email Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_Last_Outbound_Email_Id__c</fullName>
+        <description>This field is used to store the Id of the last Outbound Email.</description>
+        <externalId>false</externalId>
+        <label>Last Outbound Email Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>T_SLA_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to trigger the SLA pocess on the Case.</description>
+        <externalId>false</externalId>
+        <label>SLA Trigger</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>T_Status_Changed_To_Escalated__c</fullName>
+        <description>This field is used to store the date/time upon which the status was changed to &quot;Escalated&quot;</description>
+        <externalId>false</externalId>
+        <label>Status Changed To Escalated</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>T_Status_Changed_To_OnHold_Customer__c</fullName>
+        <description>This field is used to store the date/time upon which the status was changed to &quot;On Hold - Awaiting Customer&quot;</description>
+        <externalId>false</externalId>
+        <label>Status Changed To On Hold Customer</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>T_Status_Changed_To_OnHold_Support__c</fullName>
+        <description>This field is used to store the date/time upon which the status was changed to &quot;On Hold - Awaiting Support&quot;</description>
+        <externalId>false</externalId>
+        <label>Status Changed To On Hold Support</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>T_Status_Changed_To_Re_opened__c</fullName>
+        <description>This field is used to store the date/time upon which the status was changed to &quot;Re-opened&quot;</description>
+        <externalId>false</externalId>
+        <label>Status Changed To Re-opened</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>T_Status_Changed_To_Working__c</fullName>
+        <description>This field is used to store the date/time upon which the status was changed to &quot;Working&quot;</description>
+        <externalId>false</externalId>
+        <label>Status Changed To Working</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>T_To_Address__c</fullName>
+        <description>This field is used to retrieve the To Address from an Incoming Email on a Case record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If two addresses are displayed, please delete one in order to be able to answer to the client.</inlineHelpText>
+        <label>To Address</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>T_Trigger_Inbound_Email_SLA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to trigger the SLA on the incoming Email</description>
+        <externalId>false</externalId>
+        <label>Trigger Inbound Email SLA</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>T_Trigger_Outbound_Email_SLA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to trigger the SLA on outgoing Emails.</description>
+        <externalId>false</externalId>
+        <label>Trigger Outbound Email SLA</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>AllOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <label>All Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Closed_Cases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <label>All Closed Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>C_Newsletter_Mass_Mailing</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>C_SPAM__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>equals</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <label>Newsletter / Mass-Mailing</label>
+    </listViews>
+    <listViews>
+        <fullName>Credit_and_Collection_Case1</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>Unknown</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Credit and Collection</value>
+        </filters>
+        <label>Credit and Collection</label>
+        <language>en_US</language>
+        <queue>Credit_and_Collection</queue>
+    </listViews>
+    <listViews>
+        <fullName>Credit_and_Collection_FR</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>FR</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Credit and Collection</value>
+        </filters>
+        <label>Credit and Collection FR</label>
+        <language>en_US</language>
+        <queue>Credit_and_Collection</queue>
+        <sharedTo>
+            <group>French_Speaking</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Credit_and_Collection_NL</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>NL,DE,EN</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Credit and Collection</value>
+        </filters>
+        <label>Credit and Collection NL</label>
+        <language>en_US</language>
+        <queue>Credit_and_Collection</queue>
+        <sharedTo>
+            <group>Dutch_Speaking</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>General_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>FR</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>General</value>
+        </filters>
+        <label>General FR</label>
+        <language>en_US</language>
+        <queue>General</queue>
+        <sharedTo>
+            <group>French_Speaking</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>General_Case3</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>Unknown</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>General</value>
+        </filters>
+        <label>General</label>
+        <language>en_US</language>
+        <queue>General</queue>
+    </listViews>
+    <listViews>
+        <fullName>General_NL_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>NL,DE,EN</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>General</value>
+        </filters>
+        <label>General NL</label>
+        <language>en_US</language>
+        <queue>General</queue>
+        <sharedTo>
+            <group>Dutch_Speaking</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Move_Case1</fullName>
+        <booleanFilter>(3 OR 5) AND 2 AND 4 AND 1 AND 6 AND 7</booleanFilter>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>C_SPAM__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Move</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>C_Service__c</field>
+            <operation>equals</operation>
+            <value>I&apos;m moving in / out</value>
+        </filters>
+        <filters>
+            <field>C_SPAM__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>Unknown</value>
+        </filters>
+        <label>Move</label>
+        <language>en_US</language>
+        <queue>Move</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Move_Fr</fullName>
+        <booleanFilter>(1 OR 6) AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Move</value>
+        </filters>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>FR</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>C_Service__c</field>
+            <operation>equals</operation>
+            <value>I&apos;m moving in / out</value>
+        </filters>
+        <label>Move Fr</label>
+        <language>en_US</language>
+        <queue>Move</queue>
+        <sharedTo>
+            <group>French_Speaking</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Move_NL</fullName>
+        <booleanFilter>(1 OR 6) AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Move</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>NL,DE,EN</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>C_SPAM__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>C_Service__c</field>
+            <operation>equals</operation>
+            <value>I&apos;m moving in / out</value>
+        </filters>
+        <label>Move NL</label>
+        <language>en_US</language>
+        <queue>Move</queue>
+        <sharedTo>
+            <group>Dutch_Speaking</group>
+            <group>English_Speaking</group>
+            <group>German_Speaking</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MyCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <label>My Cases</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>MyOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <label>My Open Cases</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Open_SPAM_Cases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>C_SPAM__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <label>Open SPAM Cases</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Retention_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>FR</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Retention</value>
+        </filters>
+        <label>Retention FR</label>
+        <language>en_US</language>
+        <queue>Retention</queue>
+        <sharedTo>
+            <group>French_Speaking</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Retention_Case1</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>Unknown</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Retention</value>
+        </filters>
+        <label>Retention</label>
+        <language>en_US</language>
+        <queue>Retention</queue>
+    </listViews>
+    <listViews>
+        <fullName>Retention_NL_Case</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>C_SPAM__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>C_Detected_Language__c</field>
+            <operation>equals</operation>
+            <value>NL,DE,EN</value>
+        </filters>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>T_To_Address__c</field>
+            <operation>notEqual</operation>
+            <value>keep-in-touch@lampiris.be</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.C_Standard_Case</value>
+        </filters>
+        <filters>
+            <field>OWNER_NAME</field>
+            <operation>equals</operation>
+            <value>Retention</value>
+        </filters>
+        <label>Retention NL</label>
+        <language>en_US</language>
+        <queue>Retention</queue>
+        <sharedTo>
+            <group>Dutch_Speaking</group>
+        </sharedTo>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>C_Standard_Case</fullName>
+        <active>true</active>
+        <businessProcess>Standard Support Process</businessProcess>
+        <description>This record type is used to identify standard Cases</description>
+        <label>Standard Case</label>
+        <picklistValues>
+            <picklist>C_Concern__c</picklist>
+            <values>
+                <fullName>Attestations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Balanced account activation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before provision</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Classic relocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Connection Cuzo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deactivated after client request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discount application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encryption</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Explanations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRD index correction request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Increase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intermediary bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MS In %28Lampiris Stolen%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MS Out %28Lampiris Stealer%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overall explanations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reduced after regulation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regularization %28not for relocation%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reimbursement explanations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relocations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request for duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention - Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention - not prospected by competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention - prospected by competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer documents received</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C_Detected_Language__c</picklist>
+            <values>
+                <fullName>DE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C_Question__c</picklist>
+            <values>
+                <fullName>Client not prospected by another provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client prospected by another provider</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client wants to leave for service concerns</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Connection issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Clients</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CàB %28Wallonie%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Didn%27t receive my bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domiciliation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Explanations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GEEP%2FGEP%2FMarketing actions%2FPartners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I terminate my contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m the buyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Index</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Isol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Looking for information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modifying my client details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modifying my consumption</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mystery Switch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Need explanation about my accounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Need explanations%2FContest my regularization %28not for relocation%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment Plan%2F Clearance Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pellets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reminder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Screening B2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Searching for information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Tarif</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Want a regularization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wood</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C_Service__c</picklist>
+            <values>
+                <fullName>Corporate Clients</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I register%2Fterminate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m defaulted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m moving in %2F out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Isol</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My contractual%2Fadministrative%2Fbilling details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My discount%2FPromotion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My down payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My regularization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My reimbursements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MyLampiris</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wood</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.PRIORITY</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.SUBJECT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.STATUS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.CASE_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.SUBJECT</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWriteTransfer</sharingModel>
+    <validationRules>
+        <fullName>T_VF_Case_Is_Internal</fullName>
+        <active>true</active>
+        <description>This validation rule is used to tackle the creation of an Internal Case</description>
+        <errorConditionFormula>AND(
+    ISPICKVAL(Status,&quot;New&quot;),
+    ISPICKVAL(Origin,&quot;Internal&quot;), 
+    OR(
+       ISBLANK(AccountId),
+       ISBLANK(ContactId)
+       ) 
+    )</errorConditionFormula>
+        <errorMessage>An Account and a Contact must always be filled in when creating an Internal Case.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>T_VF_No_Close_Case_without_SQC</fullName>
+        <active>true</active>
+        <description>This Validation Rule is used to block a user to close a Case record without filling the fields &quot;Service&quot;, &quot;Question&quot; or &quot;Concern&quot; unless it is a SPAM case</description>
+        <errorConditionFormula>AND(
+    C_SPAM__c = FALSE,
+    ISPICKVAL( Status ,&quot;Closed&quot;),
+    ISBLANK(TEXT( C_Concern__c )),
+NOT($Profile.Name = &quot;System Administrator&quot; ) 
+    )</errorConditionFormula>
+        <errorMessage>You cannot close a Case without Concern.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>T_VF_No_Escalation_If_Account_Ref_Conc</fullName>
+        <active>true</active>
+        <description>This Validation Rule is used to block a user to escalate a Case record if fields &quot;Account Reference&quot; or &quot;Concern&quot; is not filled.</description>
+        <errorConditionFormula>AND(
+    ISPICKVAL( Status , &quot;Escalated&quot;),
+    OR(ISBLANK(TEXT(C_Concern__c)), 
+       ISBLANK( C_Account_Reference__c ))
+    )</errorConditionFormula>
+        <errorMessage>You cannot escalate a case without a Concern and an Account Reference</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>T_VF_No_Update_On_Status_IF_Not_Owner</fullName>
+        <active>true</active>
+        <description>This validation rule forbids the user from changing the status of the case to working if he is not the owner of the case.</description>
+        <errorConditionFormula>AND(
+OwnerId &lt;&gt;  $User.Id,
+NOT($Profile.Name = &quot;System Administrator&quot; ) ,
+ISPICKVAL(Status, &quot;Working&quot;),
+ISCHANGED(Status)
+)</errorConditionFormula>
+        <errorMessage>You must first take ownership of the case before updating the Status</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>T_VF_No_Update_Possible_Without_Owner</fullName>
+        <active>true</active>
+        <description>This rule prevents an agent from editing a case if the case is not first removed from the queue.</description>
+        <errorConditionFormula>ISPICKVAL(Status, &quot;New&quot;)
+&amp;&amp;
+NOT($Profile.Name = &quot;System Administrator&quot; )
+&amp;&amp;
+NOT($Profile.Name = &quot;Supervisor&quot; )
+&amp;&amp;
+NOT(ISCHANGED(OwnerId))
+&amp;&amp;
+OwnerId &lt;&gt;  $User.Id
+&amp;&amp;
+NOT (ISCHANGED ( C_Detected_Language__c))</errorConditionFormula>
+        <errorMessage>You cannot edit this record before first taking ownership</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Take_Ownership</fullName>
+        <availability>online</availability>
+        <description>This button invokes the visual flow Assign the Case to Myself.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Take Ownership</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>500/e?retURL=%2F500%2Fo</url>
+    </webLinks>
+</CustomObject>

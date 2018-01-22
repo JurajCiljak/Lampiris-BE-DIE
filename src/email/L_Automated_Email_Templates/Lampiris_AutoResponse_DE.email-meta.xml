@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used as auto-response for email where Language on Account = DE</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AutoResponse DE</name>
+    <style>none</style>
+    <subject>Empfangsbestätigung</subject>
+    <textOnly>Sehr geehrter Kunde,
+
+Herzlichen Dank für Ihre Nachricht. Innerhalb 5 Arbeitstagen empfangen Sie unsere Antwort. Lampiris dankt Ihnen für das Vertrauen.
+
+Mit freundlichen Grüssen,
+
+Lampiris.
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used as for concernn &quot;Activering van domiciliëring&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Activering van domiciliëring</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Uw klantreferentie: {!Case.C_Account_Reference__c}
+
+
+Beste {!Account.FirstName},
+
+Bedankt voor uw e-mail over de activering van uw domiciliëring.
+
+Uw domiciliëring is nu geactiveerd. Voortaan hoeft u uw voorschotten dus niet meer via bankoverschrijving te betalen. Dat levert u alvast meer tijd en comfort op!
+Voor een snelle en efficiënte verwerking van uw betalingen vragen we u om steeds de gestructureerde mededeling te vermelden die op uw factuur staat.
+
+Bedankt voor uw vertrouwen,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_Dutch__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

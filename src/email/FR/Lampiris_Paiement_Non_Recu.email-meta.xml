@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Paiement non reçu&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Paiement non reçu</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous vous remercions pour votre e-mail concernant le paiement de  XX  euros que vous venez d’effectuer.
+
+Je vous confirme qu’à ce jour, nous n’avons pas reçu encore le paiement en question.
+
+Pourrais-je vous demander de bien vouloir nous envoyer une preuve de paiement (extrait de compte) sur laquelle se trouvent les données suivantes ?
+
+
+Date à laquelle votre compte en banque a été débité;
+Montant du paiement en euros;
+Numéro de compte bancaire du bénéficiaire;
+Communication utilisée pour le paiement.
+
+
+Bien entendu, si votre paiement et notre lettre se sont croisés, veuillez considérer celle-ci comme nulle et non avenue.
+
+Enfin, je me permets de vous rappeler qu’il est possible de payer vos factures par domiciliation. Vous pouvez l’activer en quelques clics via votre espace client :  www.my.lampiris.be.  Si vous le souhaitez, vous pouvez consulter notre vidéo explicative en ligne ICI.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

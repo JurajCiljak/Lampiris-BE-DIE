@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This snapshot is used to have the history of the cases</description>
+    <groupColumn>IS_VIOLATED</groupColumn>
+    <mappings>
+        <sourceField>STATUS</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Case_Reporting_Snapshot__c.C_Status__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>Case.C_Detected_Language__c</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Case_Reporting_Snapshot__c.C_Detected_Language__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>IS_VIOLATED</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Case_Reporting_Snapshot__c.C_Violation__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>RowCount</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>Case_Reporting_Snapshot__c.C_Record_Count__c</targetField>
+    </mappings>
+    <name>Cases Global Status Snapshot</name>
+    <runningUser>lampiris.bot@lampiris.be</runningUser>
+    <sourceReport>Snapshots/Cases_Global_Status</sourceReport>
+    <targetObject>Case_Reporting_Snapshot__c</targetObject>
+</AnalyticSnapshot>

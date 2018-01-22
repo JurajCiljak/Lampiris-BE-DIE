@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://bae-gold-sso.lampiris.be:443/auth/realms/auth/realms/Internal-Users/protocol/openid-connect/auth</authorizeUrl>
+    <consumerKey>SFCM-BE</consumerKey>
+    <consumerSecret>bD3Rzd5SrD1gasNm+Tz6OIHMJ1OZfygbRghiwKxsMqCvA6POzOerqQ==</consumerSecret>
+    <friendlyName>SSO Gold</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <tokenUrl>https://bae-gold-sso.lampiris.be:443/auth/realms/auth/realms/Internal-Users/protocol/openid-connect/token</tokenUrl>
+    <userInfoUrl>https://bae-gold-sso.lampiris.be:443/auth/realms/auth/realms/Internal-Users/protocol/openid-connect/userinfo</userInfoUrl>
+</AuthProvider>

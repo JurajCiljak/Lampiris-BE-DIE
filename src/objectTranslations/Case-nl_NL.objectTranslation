@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Auto-response verzonden</label>
+        <name>Auto_response_Sent__c</name>
+    </fields>
+    <fields>
+        <label>Klantreferentie</label>
+        <name>C_Account_Reference__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Concern --></label>
+        <name>C_Concern__c</name>
+        <picklistValues>
+            <masterLabel>Attestations</masterLabel>
+            <translation>Attesten</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Balanced account activation</masterLabel>
+            <translation>Activering saldo up-to-date</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before provision</masterLabel>
+            <translation>Vóór levering</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Classic relocation</masterLabel>
+            <translation>Gewone verhuis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connection Cuzo</masterLabel>
+            <translation>Cuzo verbinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation>Contract</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deactivated after client request</masterLabel>
+            <translation>Deactivering na anvraag van de klant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Details</masterLabel>
+            <translation>Gegevens</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount application</masterLabel>
+            <translation>Toepassing</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Encryption</masterLabel>
+            <translation>Invoering</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Explanations</masterLabel>
+            <translation>Toelichting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow-up</masterLabel>
+            <translation>Follow-up</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRD index correction request</masterLabel>
+            <translation>Betwisting meterstand</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Information</masterLabel>
+            <translation>Algemene info</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Inquiry</masterLabel>
+            <translation>Enterprise Customers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increase</masterLabel>
+            <translation>Verhogen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intermediary bill</masterLabel>
+            <translation>Tussentijdse factuur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS In (Lampiris Stolen)</masterLabel>
+            <translation>MS In (Fout andere leverancier)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS Out (Lampiris Stealer)</masterLabel>
+            <translation>MS Out (Fout Lampiris)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order</masterLabel>
+            <translation>Bestelling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overall explanations</masterLabel>
+            <translation>Globale uitleg</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduced after regulation</masterLabel>
+            <translation>Verlaagen na afrekening</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regularization (not for relocation)</masterLabel>
+            <translation>Afrekening (geen verhuis)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reimbursement explanations</masterLabel>
+            <translation>Toelichting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relocations</masterLabel>
+            <translation>Betalingsoverzicht</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Request for duplicate</masterLabel>
+            <translation>Verzoek om duplicaat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention - Service</masterLabel>
+            <translation>Retentie - slechte service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention - not prospected by competitor</masterLabel>
+            <translation>Retentie - niet gecontacteerd door concurrent</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention - prospected by competitor</masterLabel>
+            <translation>Retentie - gecontacteerd door concurrent</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer documents received</masterLabel>
+            <translation>Overdracht document ontvangen</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date/Time Escalated/Closed --></label>
+        <name>C_Date_Time_Escalated_Closed__c</name>
+    </fields>
+    <fields>
+        <label>Gedetecteerde taal</label>
+        <name>C_Detected_Language__c</name>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation><!-- DE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EN</masterLabel>
+            <translation><!-- EN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FR</masterLabel>
+            <translation><!-- FR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NL</masterLabel>
+            <translation><!-- NL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation>Onbepaald</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Irrelevant Reopen --></label>
+        <name>C_Irrelevant_Reopen__c</name>
+    </fields>
+    <fields>
+        <label>Vraag</label>
+        <name>C_Question__c</name>
+        <picklistValues>
+            <masterLabel>Client not prospected by another provider</masterLabel>
+            <translation>Klant niet gecontacteerd door andere leverancier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client prospected by another provider</masterLabel>
+            <translation>Klant gecontacteerd door andere leverancier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client wants to leave for service concerns</masterLabel>
+            <translation>Klant wilt weg vanwege slechte service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connection issue</masterLabel>
+            <translation>Probleem verbinding</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Clients</masterLabel>
+            <translation>Enterprise Customers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CàB (Wallonie)</masterLabel>
+            <translation>CàB (Wallonie)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t receive my bill</masterLabel>
+            <translation>Ik heb geen factuur ontvangen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Domiciliation</masterLabel>
+            <translation>Domiciliering</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Explanations</masterLabel>
+            <translation>Verdere uitleg</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEEP/GEP/Marketing actions/Partners</masterLabel>
+            <translation>GEEP/GEP/Marketingacties/Partners</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General information</masterLabel>
+            <translation>Algemene info</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I terminate my contract</masterLabel>
+            <translation>Ik zeg mijn contract op</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I&apos;m the buyer</masterLabel>
+            <translation>Ik ben overnemer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Index</masterLabel>
+            <translation>Meterstand</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isol</masterLabel>
+            <translation>Isol</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Looking for information</masterLabel>
+            <translation>Ik wil graag informatie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modifying my client details</masterLabel>
+            <translation>Ik wijzig mijn klantengegevens</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modifying my consumption</masterLabel>
+            <translation>Ik wijzig mijn verbruik</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My amendment</masterLabel>
+            <translation>Mijn addendum</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mystery Switch</masterLabel>
+            <translation>Mystery Switch</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need explanation about my accounts</masterLabel>
+            <translation>Ik heb uitleg nodig over mijn voorschotfacturen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need explanations/Contest my regularization (not for relocation)</masterLabel>
+            <translation>Ik heb uitleg nodig/ik bewist mijn afrekening (geen verhuis)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Plan/ Clearance Plan</masterLabel>
+            <translation>Afbetalingsplan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pellets</masterLabel>
+            <translation>Pellets</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reminder</masterLabel>
+            <translation>Herinnering</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screening B2C</masterLabel>
+            <translation>Screening B2C</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Searching for information</masterLabel>
+            <translation>Ik wil graag informatie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Tarif</masterLabel>
+            <translation>Sociaal Tarief</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Want a regularization</masterLabel>
+            <translation>Ik wil een afrekening</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wood</masterLabel>
+            <translation>Hout</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date/Time (Re-)Opened --></label>
+        <name>C_Re_Open_Date_Time__c</name>
+    </fields>
+    <fields>
+        <help>Moet gecontroleerd worden of de Case is aangemaakt door een SPAM-mail</help>
+        <label><!-- SPAM --></label>
+        <name>C_SPAM__c</name>
+    </fields>
+    <fields>
+        <label>Dienst</label>
+        <name>C_Service__c</name>
+        <picklistValues>
+            <masterLabel>Corporate Clients</masterLabel>
+            <translation>Enterprise Customers</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I register/terminate</masterLabel>
+            <translation>Ik schrijf me in /ik zeg mijn contract op</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I&apos;m defaulted</masterLabel>
+            <translation>Ik ben in gebreke van betaling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I&apos;m moving in / out</masterLabel>
+            <translation>Ik verhuis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isol</masterLabel>
+            <translation>Isol</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My contractual/administrative/billing details</masterLabel>
+            <translation>Mijn contractuele/administratieve/facturatiegegeve</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My discount/Promotion</masterLabel>
+            <translation>Mijn koring/mijn promotie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My down payments</masterLabel>
+            <translation>Mijn voorschotfacturen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My payments</masterLabel>
+            <translation>Mijn betalingen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My regularization</masterLabel>
+            <translation>Mijn afrekeningen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My reimbursements</masterLabel>
+            <translation>Mijn terugbetalingen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyLampiris</masterLabel>
+            <translation>MyLampiris</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention</masterLabel>
+            <translation>Retentie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation>Warm</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wood</masterLabel>
+            <translation>Wood</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case Number (External Id) --></label>
+        <name>T_Case_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Close SLA Process --></label>
+        <name>T_Close_SLA_Process__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Inbound Emails --></label>
+        <name>T_Count_Inbound_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Outbound Emails --></label>
+        <name>T_Count_Outbound_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Total Emails --></label>
+        <name>T_Count_Total_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Last Incoming Email --></label>
+        <name>T_Date_Last_Incoming_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Last Outgoing Email --></label>
+        <name>T_Date_Last_Outgoing_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Inbound Email Id --></label>
+        <name>T_Last_Inbound_Email_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Outbound Email Id --></label>
+        <name>T_Last_Outbound_Email_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Trigger --></label>
+        <name>T_SLA_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To Escalated --></label>
+        <name>T_Status_Changed_To_Escalated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To On Hold Customer --></label>
+        <name>T_Status_Changed_To_OnHold_Customer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To On Hold Support --></label>
+        <name>T_Status_Changed_To_OnHold_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To Re-opened --></label>
+        <name>T_Status_Changed_To_Re_opened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To Working --></label>
+        <name>T_Status_Changed_To_Working__c</name>
+    </fields>
+    <fields>
+        <help>Indien er twee adressen werden meegedeeld, gelieve er dan eentje te verwijderen om de klant te kunnen antwoorden;</help>
+        <label>Adres</label>
+        <name>T_To_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Inbound Email SLA --></label>
+        <name>T_Trigger_Inbound_Email_SLA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Outbound Email SLA --></label>
+        <name>T_Trigger_Outbound_Email_SLA__c</name>
+    </fields>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Standard Case --></label>
+        <name>C_Standard_Case</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Een Internal Case moet altijd een Account en een Contact hebben.</errorMessage>
+        <name>T_VF_Case_Is_Internal</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Gelieve een correcte concern te kiezen, alvorens het dossier af te sluiten. Bedankt.</errorMessage>
+        <name>T_VF_No_Close_Case_without_SQC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Gelieve een correct concern te kiezen en klantnummer aan te vullen, alvorens een ticket aan te maken voor BackOffice. Bedankt</errorMessage>
+        <name>T_VF_No_Escalation_If_Account_Ref_Conc</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>De Case moet eerst aan jezelf toegewezen worden, voordat het mogelijk is de status aan te passen.</errorMessage>
+        <name>T_VF_No_Update_On_Status_IF_Not_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Het is niet mogelijk deze Case te updaten, alvorens ze in behandeling te nemen.</errorMessage>
+        <name>T_VF_No_Update_Possible_Without_Owner</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Take_Ownership --></label>
+        <name>Take_Ownership</name>
+    </webLinks>
+</CustomObjectTranslation>

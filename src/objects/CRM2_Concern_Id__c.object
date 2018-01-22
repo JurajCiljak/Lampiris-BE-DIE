@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Table for CRM2 Concern Id</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LMP_Concern__c</fullName>
+        <description>This field is used to capture the Concern of the case.</description>
+        <externalId>false</externalId>
+        <label>Concern</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LMP_Question__c</fullName>
+        <description>This field is used to capture the Question linked to a Case record.</description>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LMP_Service__c</fullName>
+        <description>This field is used to capture the Service linked to a Case record.</description>
+        <externalId>false</externalId>
+        <label>Service</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>CRM2 Concern Id</label>
+    <visibility>Public</visibility>
+</CustomObject>

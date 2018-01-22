@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Auto-response envoyée</label>
+        <name>Auto_response_Sent__c</name>
+    </fields>
+    <fields>
+        <label>Référence Client</label>
+        <name>C_Account_Reference__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Concern --></label>
+        <name>C_Concern__c</name>
+        <picklistValues>
+            <masterLabel>Attestations</masterLabel>
+            <translation><!-- Attestations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Balanced account activation</masterLabel>
+            <translation>Activation solde à jour</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before provision</masterLabel>
+            <translation>Avant fourniture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Classic relocation</masterLabel>
+            <translation>Déménagement classique</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connection Cuzo</masterLabel>
+            <translation>Connexion Cuzo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation>Contrat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deactivated after client request</masterLabel>
+            <translation>Désactivation à la demande du client</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Details</masterLabel>
+            <translation>Coordonnées</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount application</masterLabel>
+            <translation>Application ristourne</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Encryption</masterLabel>
+            <translation>Encodage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Explanations</masterLabel>
+            <translation>Explications</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow-up</masterLabel>
+            <translation>Suivi</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRD index correction request</masterLabel>
+            <translation>Demande de correction index GRD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Information</masterLabel>
+            <translation>Infos générales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Inquiry</masterLabel>
+            <translation>Demande générale</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Increase</masterLabel>
+            <translation>Augmenter</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intermediary bill</masterLabel>
+            <translation>Facture intermédiaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS In (Lampiris Stolen)</masterLabel>
+            <translation>MS In (Lampiris volé)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS Out (Lampiris Stealer)</masterLabel>
+            <translation>MS Out (Lampiris voleur)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order</masterLabel>
+            <translation>Commande</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overall explanations</masterLabel>
+            <translation>Explications globales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduced after regulation</masterLabel>
+            <translation>Diminuer après régule</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regularization (not for relocation)</masterLabel>
+            <translation>Régularisation (non déménagement)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reimbursement explanations</masterLabel>
+            <translation>Remboursements explications</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Relocations</masterLabel>
+            <translation>Mouvements</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Request for duplicate</masterLabel>
+            <translation>Demande de duplicata</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention - Service</masterLabel>
+            <translation>Rétention - Service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention - not prospected by competitor</masterLabel>
+            <translation>Rétention - Pas démarché par concurrence</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention - prospected by competitor</masterLabel>
+            <translation>Rétention - Démarché par la concurrence</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer documents received</masterLabel>
+            <translation>Transfert Document reçu</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date/Time Escalated/Closed --></label>
+        <name>C_Date_Time_Escalated_Closed__c</name>
+    </fields>
+    <fields>
+        <label>Langue détectée</label>
+        <name>C_Detected_Language__c</name>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation><!-- DE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EN</masterLabel>
+            <translation><!-- EN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FR</masterLabel>
+            <translation><!-- FR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NL</masterLabel>
+            <translation><!-- NL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation>Non définie</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Ré-ouverture inutile</label>
+        <name>C_Irrelevant_Reopen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>C_Question__c</name>
+        <picklistValues>
+            <masterLabel>Client not prospected by another provider</masterLabel>
+            <translation>Client pas démarché par un autre fournisseur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client prospected by another provider</masterLabel>
+            <translation>Client démarché par un autre fournisseur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client wants to leave for service concerns</masterLabel>
+            <translation>Client veut quitter pour problèmes de service</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connection issue</masterLabel>
+            <translation>Problème de connexion</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Clients</masterLabel>
+            <translation>Clients Enterprise</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CàB (Wallonie)</masterLabel>
+            <translation>CàB (Wallonie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t receive my bill</masterLabel>
+            <translation>Je n&apos;ai pas reçu de facture</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Domiciliation</masterLabel>
+            <translation>Domiciliation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Explanations</masterLabel>
+            <translation>Explications</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEEP/GEP/Marketing actions/Partners</masterLabel>
+            <translation>GEEP/GEP/Actions marketing/Partenaires</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General information</masterLabel>
+            <translation>Informations générales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I terminate my contract</masterLabel>
+            <translation>Je résilie mon contrat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I&apos;m the buyer</masterLabel>
+            <translation>Je suis repreneur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Index</masterLabel>
+            <translation>Index</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isol</masterLabel>
+            <translation>Isol</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Looking for information</masterLabel>
+            <translation>Je souhaite des infos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modifying my client details</masterLabel>
+            <translation>Je modifie mes données clients</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modifying my consumption</masterLabel>
+            <translation>Je modifie ma consommation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My amendment</masterLabel>
+            <translation>Mon avenant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mystery Switch</masterLabel>
+            <translation>Mystery Switch</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need explanation about my accounts</masterLabel>
+            <translation>J&apos;ai besoin d&apos;explications sur mes acomptes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need explanations/Contest my regularization (not for relocation)</masterLabel>
+            <translation>J&apos;ai besoin d&apos;explications/je conteste ma régularisation (non déménagement)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Plan/ Clearance Plan</masterLabel>
+            <translation>Plan de paiement / Plan d&apos;apurement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pellets</masterLabel>
+            <translation>Pellets</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reminder</masterLabel>
+            <translation>Rappel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screening B2C</masterLabel>
+            <translation>Screening B2C</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Searching for information</masterLabel>
+            <translation>Je souhaite des infos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Tarif</masterLabel>
+            <translation>Tarif Social</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Want a regularization</masterLabel>
+            <translation>Je souhaite une régule</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wood</masterLabel>
+            <translation>Bois</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date/Time (Re-)Opened --></label>
+        <name>C_Re_Open_Date_Time__c</name>
+    </fields>
+    <fields>
+        <help>la box doit être cochée si la requête a été créée par un spam</help>
+        <label><!-- SPAM --></label>
+        <name>C_SPAM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service --></label>
+        <name>C_Service__c</name>
+        <picklistValues>
+            <masterLabel>Corporate Clients</masterLabel>
+            <translation>Clients Enterprise</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I register/terminate</masterLabel>
+            <translation>Je m&apos;inscris / je résilie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I&apos;m defaulted</masterLabel>
+            <translation>Je suis en défaut de paiement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I&apos;m moving in / out</masterLabel>
+            <translation>J&apos;emménage / Je déménage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isol</masterLabel>
+            <translation>Isol</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My contractual/administrative/billing details</masterLabel>
+            <translation>Mes données contractuelles/Administratives/de facturation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My discount/Promotion</masterLabel>
+            <translation>Ma ristourne/Ma promotion</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My down payments</masterLabel>
+            <translation>Mes acomptes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My payments</masterLabel>
+            <translation>Mes paiements</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My regularization</masterLabel>
+            <translation>Mes régularisations</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My reimbursements</masterLabel>
+            <translation>Mes remboursements</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyLampiris</masterLabel>
+            <translation>MyLampiris</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention</masterLabel>
+            <translation>Rétention</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation>Warm</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wood</masterLabel>
+            <translation>Wood</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case Number (External Id) --></label>
+        <name>T_Case_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Close SLA Process --></label>
+        <name>T_Close_SLA_Process__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Inbound Emails --></label>
+        <name>T_Count_Inbound_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Outbound Emails --></label>
+        <name>T_Count_Outbound_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count Total Emails --></label>
+        <name>T_Count_Total_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Last Incoming Email --></label>
+        <name>T_Date_Last_Incoming_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Last Outgoing Email --></label>
+        <name>T_Date_Last_Outgoing_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Inbound Email Id --></label>
+        <name>T_Last_Inbound_Email_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Outbound Email Id --></label>
+        <name>T_Last_Outbound_Email_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Trigger --></label>
+        <name>T_SLA_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To Escalated --></label>
+        <name>T_Status_Changed_To_Escalated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To On Hold Customer --></label>
+        <name>T_Status_Changed_To_OnHold_Customer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To On Hold Support --></label>
+        <name>T_Status_Changed_To_OnHold_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To Re-opened --></label>
+        <name>T_Status_Changed_To_Re_opened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Changed To Working --></label>
+        <name>T_Status_Changed_To_Working__c</name>
+    </fields>
+    <fields>
+        <help>Si deux adresses sont renseignées, veuillez supprimer une pour pouvoir répondre au client.</help>
+        <label>Adresse</label>
+        <name>T_To_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Inbound Email SLA --></label>
+        <name>T_Trigger_Inbound_Email_SLA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Outbound Email SLA --></label>
+        <name>T_Trigger_Outbound_Email_SLA__c</name>
+    </fields>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Standard Case --></label>
+        <name>C_Standard_Case</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Un Compte et un Contact doivent toujours être remplis lors de la création d’une requête interne</errorMessage>
+        <name>T_VF_Case_Is_Internal</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Merci de choisir le bon concerne avant de traiter le dossier.</errorMessage>
+        <name>T_VF_No_Close_Case_without_SQC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Merci de choisir le bon concerne et de remplir la reference client avant de creer un ticket pour le BackOffice.</errorMessage>
+        <name>T_VF_No_Escalation_If_Account_Ref_Conc</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Tu dois d’abord t’assigner le dossier avant de pouvoir modifier le statut.</errorMessage>
+        <name>T_VF_No_Update_On_Status_IF_Not_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Tu ne peux pas modifier le dossier sans te l’être assigné auparavant.</errorMessage>
+        <name>T_VF_No_Update_Possible_Without_Owner</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Take_Ownership --></label>
+        <name>Take_Ownership</name>
+    </webLinks>
+</CustomObjectTranslation>

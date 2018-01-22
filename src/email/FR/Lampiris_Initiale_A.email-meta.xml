@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Initiale A3</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Initiale A</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre e-mail concernant votre première facture et nous vous en remercions.
+
+Le montant de votre facture d’acompte (tva comprise) inclut plusieurs composantes : le forfait énergétique (gaz et/ou électricité), les frais d’abonnement,« vos réductions éventuelles », ainsi que les coûts liés aux taxes, au transport et à la distribution (détaillés en annexe de la facture d’acompte).
+
+Votre facture d’acompte est un forfait calculé sur base de la consommation que vous nous avez transmise lors de votre inscription ou le cas échéant, sur base de l’estimation de consommation communiquée par votre gestionnaire de réseau de distribution.
+
+Votre première facture d’acompte est calculée selon le nombre de jours de consommation du premier mois de votre contrat. Par exemple, si votre contrat débute le 7 du mois, 23 jours vous seront facturés.
+
+Ensuite, la base de calcul portera sur un mois complet. C’est pourquoi le montant de votre deuxième facture d’acompte sera plus élevé que celui de votre première facture d’acompte.
+
+Enfin, sachez que votre facture d’acompte vous est envoyée à date fixe durant toute la durée de votre contrat.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

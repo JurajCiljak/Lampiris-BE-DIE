@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Explication Regularisation&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Explication Regularisation</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous vous remercions pour votre e-mail concernant votre facture de régularisation.
+
+Pour rappel, au moins une fois par an, votre gestionnaire de réseau nous transmet vos index de consommation. Pour établir votre régularisation, nous procédons de la manière suivante :
+
+Consommation totale réelle en euros
+-  Consommation totale déjà facturée en euros
+= Montant de votre régularisation
+
+La consommation totale réelle  correspond à votre consommation à laquelle s’ajoutent des frais d’abonnement et de location de compteur, des coûts de transport et de distribution ainsi que des taxes éventuelles.
+
+Pour calculer  la consommation totale déjà facturée, nous tenons compte du montant total des factures d’acompte que nous vous avons envoyées. Celui-ci ne correspond dès lors pas toujours au montant total des acomptes que vous nous avez versés.
+
+Selon votre situation, ce calcul peut aboutir à une facture ou à une note de crédit. Par ailleurs, votre régularisation nous permet d’ajuster le montant de vos acomptes suivants pour qu’ils correspondent davantage à votre consommation réelle.
+
+Veuillez noter que sur la première page de votre facture de régularisation, les montants sont exprimés TVA comprise. Par contre, dans le détail de votre régularisation, les montants sont hors TVA.
+
+Régularisation  XXXXXX :
+
+Consommation totale réelle : XXXXX  euros hors TVA
+Consommation totale déjà facturée : XXXXX euros hors TVA
+Le tableau ci-dessous reprend le détail des différentes factures émises pour la période concernée.
+
+Régularisation (numéro régul): période xx/xx/xxxx - xx/xx/xxxx
+
+Période de facturation Numéro de facture Montant de la facture hors TVA*
+Janvier 201    €
+Février 201
+Mars 201
+Avril 201
+Mai 201
+Juin 201
+Juillet 201
+Août 201
+Septembre 201
+Octobre 201
+Novembre 201
+Décembre 201
+Montant total déjà facturé  €
+
+
+*Certaines composantes du tarif appliqué ne sont pas soumises à la TVA (redevance de raccordement en Wallonie, cotisation clients protégés).
+
+Votre régularisation correspond donc à un montant en notre/votre faveur de  XXXXX  euros hors TVA ou XXX  euros TVA comprise.
+
+Nous vous invitons dès lors à nous verser ce montant sur le numéro de compte bancaire 001-5094242-72 dans un délai maximal de 18 jours à dater de votre régularisation. Si entre-temps vous avez déjà réglé votre facture, veuillez ne pas tenir compte de cette invitation de paiement.
+
+Ce montant sera remboursé sur votre compte bancaire dans un délai maximal de 18 jours à dater de votre régularisation. Si vous ne nous avez pas encore communiqué votre numéro de compte bancaire, nous vous invitons à le faire dans les plus brefs délais.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

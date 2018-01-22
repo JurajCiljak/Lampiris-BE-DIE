@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://sso.lampiris.be:443/auth/realms/Internal-Users/protocol/openid-connect/auth</authorizeUrl>
+    <consumerKey>SFCM-BE</consumerKey>
+    <consumerSecret>sQnCzRytZVQ6aUvlYDoeFo4QFinu9EvQNBByDUDsN4G+OYRz+VolTg==</consumerSecret>
+    <executionUser>lampiris.bot@lampiris.be.die</executionUser>
+    <friendlyName>SSO Production</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <registrationHandler>AutocreatedRegHandlerKeycloak</registrationHandler>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <tokenUrl>https://sso.lampiris.be:443/auth/realms/Internal-Users/protocol/openid-connect/token</tokenUrl>
+    <userInfoUrl>https://sso.lampiris.be:443/auth/realms/Internal-Users/protocol/openid-connect/userinfo</userInfoUrl>
+</AuthProvider>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Closed</masterLabel>
+        <translation>Gesloten</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Escalated</masterLabel>
+        <translation>Geëscaleerd</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New</masterLabel>
+        <translation>Nieuw</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>On Hold - Awaiting Customer</masterLabel>
+        <translation>Wachten op - Klant</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>On Hold - Awaiting Support</masterLabel>
+        <translation>Wachten op - Support</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Re-opened</masterLabel>
+        <translation>Heropend</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Working</masterLabel>
+        <translation>In behandeling</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

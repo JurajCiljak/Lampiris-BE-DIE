@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <businessHours>Lampiris BE</businessHours>
+    <description>This process is used to check email SLA on Case</description>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.T_Close_SLA_Process__c</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <isVersionDefault>true</isVersionDefault>
+    <milestones>
+        <milestoneCriteriaFormula>(AND(
+    NOT(ISBLANK(T_Date_Last_Incoming_Email__c)),
+    ISBLANK(T_Date_Last_Outgoing_Email__c)
+    )
+|| 
+T_Date_Last_Incoming_Email__c  &gt;   T_Date_Last_Outgoing_Email__c
+|| 
+T_Trigger_Inbound_Email_SLA__c = TRUE)
+&amp;&amp;
+T_Close_SLA_Process__c = FALSE</milestoneCriteriaFormula>
+        <milestoneName>Inbound Email</milestoneName>
+        <minutesToComplete>660</minutesToComplete>
+        <successActions>
+            <name>Case.T_FU_Case_Set_Inbound_Email_SLA_To_False</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>Case.T_FU_Case_Set_Outbound_Email_SLA_To_True</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>Case.T_FU_Case_Set_Inbound_Email_SLA_To_False</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case.T_FU_Case_Set_Outbound_Email_SLA_To_True</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFormula>(T_Date_Last_Incoming_Email__c &lt; T_Date_Last_Outgoing_Email__c 
+|| 
+T_Trigger_Outbound_Email_SLA__c = TRUE)
+&amp;&amp;
+T_Close_SLA_Process__c = FALSE</milestoneCriteriaFormula>
+        <milestoneName>Outbound Email</milestoneName>
+        <minutesToComplete>1320</minutesToComplete>
+        <successActions>
+            <name>Case.T_FU_Case_Set_Inbound_Email_SLA_To_True</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>Case.T_FU_Case_Set_Outbound_Email_SLA_False</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case.T_FU_Case_Set_Inbound_Email_SLA_To_True</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case.T_FU_Case_Set_Outbound_Email_SLA_False</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <name>email management</name>
+    <versionMaster>5520Y0000009Rct</versionMaster>
+    <versionNumber>3</versionNumber>
+</EntitlementProcess>

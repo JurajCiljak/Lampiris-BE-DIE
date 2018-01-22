@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Sales --></label>
+        <name>Sales</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- General Email Address --></label>
+        <name>General_Email_Address</name>
+    </customLabels>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_Flow_Case_Add_Entitlement-1</fullName>
+        </flows>
+        <fullName>T_Flow_Case_Add_Entitlement</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_Flow_Case_Update_Account_Reference-1</fullName>
+        </flows>
+        <fullName>T_Flow_Case_Update_Account_Reference</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_Flow_Case_Update_Priority_Based_On_Message-1</fullName>
+        </flows>
+        <fullName>T_Flow_Case_Update_Priority_Based_On_Message</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_Flow_Case_Update_SLA-1</fullName>
+        </flows>
+        <fullName>T_Flow_Case_Update_SLA</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_Flow_Email_Message_Send_Auto_Response-3</fullName>
+        </flows>
+        <flows>
+            <fullName>T_Flow_Email_Message_Send_Auto_Response-1</fullName>
+        </flows>
+        <flows>
+            <fullName>T_Flow_Email_Message_Send_Auto_Response-2</fullName>
+        </flows>
+        <fullName>T_Flow_Email_Message_Send_Auto_Response</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_PB_Case_Creation-1</fullName>
+        </flows>
+        <fullName>T_PB_Case_Creation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_PB_Case_Creation_Update_2-1</fullName>
+        </flows>
+        <flows>
+            <fullName>T_PB_Case_Creation_Update_2-2</fullName>
+        </flows>
+        <fullName>T_PB_Case_Creation_Update_2</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_PB_Incoming_Email_Message_Creation2-1</fullName>
+        </flows>
+        <flows>
+            <fullName>T_PB_Incoming_Email_Message_Creation2-2</fullName>
+        </flows>
+        <fullName>T_PB_Incoming_Email_Message_Creation2</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>T_PB_Outgoing_Email_Message_Creation2-1</fullName>
+        </flows>
+        <fullName>T_PB_Outgoing_Email_Message_Creation2</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Assign_Case_to_Myself-1</fullName>
+        </flows>
+        <fullName>Assign_Case_to_Myself</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Follow Up --></label>
+        <name>Follow_Up</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Accounts with Entitlements with Contacts --></description>
+        <label><!-- Accounts with Entitlements with Contacts --></label>
+        <name>Accounts_with_Entitlements_with_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Entitlements --></label>
+            <name>Entitlements</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases with owners --></description>
+        <label><!-- Cases with owners --></label>
+        <name>Cases_with_owners</name>
+        <sections>
+            <label><!-- Cases (Case Owner) --></label>
+            <name>Cases (Case Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Email --></label>
+            <name>Email</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Service Contracts with Contract Line Items --></description>
+        <label><!-- Service Contracts with Contract Line Items --></label>
+        <name>Service_Contracts_with_Contract_Line_Items</name>
+        <sections>
+            <label><!-- Contract Line Items --></label>
+            <name>Contract Line Items</name>
+        </sections>
+        <sections>
+            <label><!-- Service Contracts --></label>
+            <name>Service Contracts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Service Contracts with Entitlements --></description>
+        <label><!-- Service Contracts with Entitlements --></label>
+        <name>Service_Contracts_with_Entitlements</name>
+        <sections>
+            <label><!-- Entitlements --></label>
+            <name>Entitlements</name>
+        </sections>
+        <sections>
+            <label><!-- Service Contracts --></label>
+            <name>Service Contracts</name>
+        </sections>
+    </reportTypes>
+</Translations>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM2 Concern Id</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CRM2 Concern Id</value>
+    </caseValues>
+    <fields>
+        <label><!-- Concern --></label>
+        <name>LMP_Concern__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>LMP_Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service --></label>
+        <name>LMP_Service__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

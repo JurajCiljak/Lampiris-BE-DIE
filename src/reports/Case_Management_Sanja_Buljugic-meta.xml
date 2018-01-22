@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>j.massot@asugoconsulting.com.prod</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>sanja.buljugic@captis.be</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <name>Case Management - Sanja Buljugic</name>
+</ReportFolder>

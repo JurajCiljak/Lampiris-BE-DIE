@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Modif données dans dossier&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Modif données dans dossier</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous vous remercions pour votre e-mail concernant votre demande de modification des données reprises dans votre contrat.
+
+Ainsi que mentionné lors de votre demande, je vous confirme que je viens d’adapter votre XXXXXX  d’après les données que vous nous avez transmises par e-mail.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used as for concern &quot;welkomstbrief E01 aanvraag&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Welkomstbrief E01 aanvraag</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Uw klantreferentie: {!Case.C_Account_Reference__c}
+
+
+Beste {!Account.FirstName},
+
+Bedankt voor uw e-mail over uw inschrijving.
+
+Ik kan u met plezier bevestigen dat u nu klant bent bij Lampiris. Welkom! Neem snel contact op met uw netbeheerder XXX op het nummer XX/XXX.XXX.XXX om een afspraak te maken voor de fysieke opening van uw meters.
+
+Zodra dat gebeurd is, kunt u volop profiteren van onze voordelige tarieven.
+
+Bedankt voor uw vertrouwen,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_Dutch__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

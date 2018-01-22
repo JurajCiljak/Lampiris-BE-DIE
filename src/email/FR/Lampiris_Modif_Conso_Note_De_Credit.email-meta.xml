@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Modif conso + Note de crédit&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Modif conso + Note de crédit</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre demande de modification du montant de vos factures d’acompte et nous vous en remercions.
+
+J’ai bien diminué le montant de vos factures d’acompte conformément à votre requête. Cette modification sera d’application à partir du mois de  XXXXXXX .
+
+Par ailleurs, vos premières factures pour les mois de XXXXX à XXXX ont été annulées par une note de crédit que vous recevrez dans un délai de sept jours ouvrables.
+
+Prochainement, vous recevrez donc de nouvelles factures d’acompte pour cette même période.
+
+Celles-ci s’élèveront dorénavant à  xxxxxx euros TVA comprise.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

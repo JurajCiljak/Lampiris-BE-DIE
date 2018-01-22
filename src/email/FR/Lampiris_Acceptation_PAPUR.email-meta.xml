@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Acceptation PAPUR&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Acceptation PAPUR</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre e-mail concernant  votre demande de plan d’apurement.
+
+Je vous confirme bien notre accord et vous invite à régler la somme de  XXX euros selon les échéances détaillées dans le plan d’apurement qui vous parviendra par voie postale dans les prochains jours.
+
+Nous insistons sur l’importance de respecter scrupuleusement ces échéances. Dans le cas contraire, nous serions contraints de confier votre dossier à notre société de recouvrement.
+
+Par ailleurs, nous vous demandons d’effectuer le paiement de vos factures d’acompte mensuelles dans les délais prévus.
+
+Pour votre bonne information, je vous ai annexé la liste actualisée de vos mouvements financiers.
+
+Enfin, je tiens également à vous informer que l’acceptation de votre plan d’apurement ne change en rien la procédure de placement du compteur à budget. En effet, celle-ci ne pourra être annulée que lorsque les sommes dues auront été payées.
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

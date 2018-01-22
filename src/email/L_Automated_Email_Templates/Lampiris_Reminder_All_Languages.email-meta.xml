@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used as reminder for case &quot;On hold - awaiting customer&quot; when detected language is unknown.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Reminder All Languages</name>
+    <style>none</style>
+    <subject>Gentle Reminder</subject>
+    <textOnly>Dag, Bonjour,
+Hallo, Hello,
+
+
+Even een herinnering om je te laten weten dat we nog wachten op een aantal gegevens vooraleer we je aanvraag kunnen behandelen.
+Alvast bedankt om ze door te sturen zodra je wat tijd hebt.
+
+------------------------------
+Je voulais juste vous rappeler qu’il me manque encore certaines informations pour répondre de manière complète à votre demande.
+N’hésitez pas à me répondre dès que vous avez un peu de temps.
+------------------------------
+Um Ihre Anfrage vollständig beantworten zu können, fehlen mir noch einige Informationen von Ihnen.
+Bitte antworten Sie mir, sobald Sie etwas Zeit haben.
+------------------------------
+I just wanted to remind you that I’m still missing certain bits of information I need to reply in full to your query.
+Please don’t hesitate to get back to me as soon as you have the time.
+
+
+Met vriendelijke groet, Cordialement,
+Besten dank im Voraus und herzlichen Gruß, Kind regards,
+
+{!Case.OwnerFirstName}.
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

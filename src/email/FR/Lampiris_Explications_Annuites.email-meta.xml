@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used for concern &quot;Explications annuité&quot;</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Explications annuité</name>
+    <style>none</style>
+    <subject>Re: {!Case.Subject}</subject>
+    <textOnly>Votre référence: {!Case.C_Account_Reference__c}
+
+
+
+Bonjour {!Account.FirstName},
+
+Nous avons bien reçu votre e-mail concernant  l’augmentation/la diminution  de votre facture d’acompte.
+
+Chaque année, au mois de  XXX , à l’annuité de votre contrat, nous en profitons pour mettre à jour vos données tarifaires. Par conséquent, le montant de vos prochaines factures d’acompte sera adapté conformément aux informations transmises par votre gestionnaire de réseau.
+
+Plusieurs critères expliquent cette variation :
+
+
+L’augmentation des coûts de transport inhérents à la fourniture d’énergie ;
+La hausse des taxes fédérales ;
+Les fluctuations mensuelles du prix du gaz. La fluctuation tarifaire est prise en compte au moment de l’annuité ou du renouvellement de votre contrat (ainsi qu’au moment de votre régularisation annuelle).
+
+Nous tenons compte de ces différents éléments pour vous garantir une facturation claire, adaptée aux tarifs en vigueur et représentative de votre consommation. De plus, la mise à jour de ces différents éléments permettra de vous éviter de mauvaises surprises lors de votre prochaine régularisation. Merci de votre confiance,
+
+Merci de votre confiance,
+
+{!Case.OwnerFirstName}
+{!User.T_Signature_French__c}
+
+
+Lampiris SA
+Rue Saint-Laurent 54
+4000 Liège</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

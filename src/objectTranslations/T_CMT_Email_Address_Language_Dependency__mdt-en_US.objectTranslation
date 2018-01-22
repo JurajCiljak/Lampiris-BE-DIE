@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Email Address Language Dependency</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Email Adress Language Dependencies</value>
+    </caseValues>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Name --></label>
+        <name>Queue_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Concern --></label>
+        <name>T_Concern__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Address --></label>
+        <name>T_Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>T_Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>T_Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service --></label>
+        <name>T_Service__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

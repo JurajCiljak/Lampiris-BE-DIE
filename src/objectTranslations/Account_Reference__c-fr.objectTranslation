@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Référence Client</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Références Client</value>
+    </caseValues>
+    <fields>
+        <label>Nom Client</label>
+        <name>C_Account_Name__c</name>
+        <relationshipLabel>Références Client</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>C_ExternalId__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Person Key --></label>
+        <name>C_External_Person_Key__c</name>
+    </fields>
+    <fields>
+        <label>Type de Référence</label>
+        <name>C_Reference_Type__c</name>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation>Energie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISOL</masterLabel>
+            <translation><!-- ISOL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TECH</masterLabel>
+            <translation><!-- TECH --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Formula Person Key --></label>
+        <name>DEL_Formula_Person_Key__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Account Reference Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Référence Client</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
